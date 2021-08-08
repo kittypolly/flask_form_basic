@@ -1,0 +1,15 @@
+{% if group_name %}
+
+<h1>제가 좋아하는 그룹은 {{ group_name }} 입니다.</h1>
+
+{% else %}
+
+<h1>좋아하는 그룹을 아래 입력란에 입력해주세요.</h1>
+
+{% endif %}
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.group_name.label}} {{form.group_name()}}
+    {{ form.submit() }}
+</form>
